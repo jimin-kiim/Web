@@ -1,0 +1,112 @@
+:root {
+  --gray: #bcbcbd;
+  --d-gray: #777777;
+  --blue: #3386e6;
+  --d-blue: #0a60c4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 500px;
+
+  border: solid 1px var(--gray);
+  border-radius: 2px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.username,
+.password {
+  width: 400px;
+  height: 40px;
+  border: solid 1px var(--gray);
+  border-radius: 2px;
+  padding-left: 10px;
+}
+
+.username {
+  margin-bottom: 10px;
+}
+
+.password {
+  margin-bottom: 20px;
+}
+
+.login {
+  width: 410px;
+  height: 40px;
+
+  border: none;
+  border-radius: 3px;
+  background-color: var(--blue);
+
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.or-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.gray-line {
+  width: 180px;
+  border: none 0 gray;
+  border-top: solid 1px var(--gray);
+}
+
+.gray-text {
+  font-weight: 600;
+  color: var(--d-gray);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.facebook-login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.facebook-logo {
+  width: 20px;
+  background-color: var(--d-blue);
+  margin-right: 10px;
+}
+
+.f {
+  position: absolute;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 4px;
+  font-weight: 900;
+  color: white;
+}
+
+.facebook-login-text {
+  position: relative;
+  margin-top: 2px;
+  font-weight: 600;
+  color: var(--d-blue);
+}
+
+.blue-link {
+  font-size: small;
+}
