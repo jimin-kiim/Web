@@ -2,49 +2,52 @@ a {
   text-decoration: none;
 }
 .selected {
-  background-color: brown;
+  background-color: rgb(96, 126, 88);
 }
 
 td {
   background-color: burlywood;
+  font-size: 12px;
 }
 
 th {
-  width: 40px;
-  height: 25px;
+  height: 30px;
+  width: 20px;
 }
 
-.section1 {
-  background-color: lightblue;
+.section1-1 {
+  background-color: var(--cloudygray);
   display: flex;
   justify-content: space-around;
   padding: 20px; /*반응형까지는 아니여도 화면 크기 줄이고 늘릴 때 그에 맞게 변하게 하고 싶으면 width, height 지정하지 말고 padding만 주기*/
   align-items: center;
 }
 
-.section2 {
-  background-color: lightcyan;
+.section1-2 {
+  background-color: var(--foggray);
   margin: 0 50px;
   padding: 0 20px;
 }
 
-.section3 {
+.section2 {
   display: flex;
   justify-content: space-around;
   margin: 20px;
 }
+table {
+  background-color: rgb(122, 123, 117);
+}
+.section2-1 {
+  background-color: rgb(214, 203, 193);
+  padding: 20px;
+}
 
-.section3-1 {
+.section2-2 {
   background-color: linen;
   padding: 20px;
 }
 
-.section3-2 {
-  background-color: linen;
-  padding: 20px;
-}
-
-.section3-3 {
+.section2-3 {
   background-color: mistyrose;
   padding: 10px;
 }
@@ -67,4 +70,8 @@ th {
 .img {
   width: 50px;
   height: 50px;
+}
+
+.day {
+  width: 50px;
 }
