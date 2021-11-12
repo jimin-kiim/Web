@@ -10,3 +10,28 @@ th {
   width: 40px;
   height: 25px;
 }
+
+.section1 {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  height: 160px;
+  align-items: center;
+}
+
+.section2 {
+  background-color: lightcyan;
+  height: 140px;
+  margin: 0 50px;
+  padding: 0 20px;
+}
+
+#image {
+  width: 140px;
+  height: 140px;
+  margin-left: 10px;
+}
+
+.highlight {
+  background-color: lightyellow;
+}
