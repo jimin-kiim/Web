@@ -2,29 +2,28 @@ a {
   text-decoration: none;
 }
 .selected {
-  background-color: rgb(96, 126, 88);
+  background-color: dimgray;
+  color: var(--coconutwhite);
+  padding: 0 4px;
 }
-
-td {
-  background-color: burlywood;
-  font-size: 12px;
-}
-
-th {
-  height: 30px;
-  width: 20px;
+.section1-1,
+.section2-1,
+.section2-2,
+.section2-3 {
+  border-radius: 10px;
 }
 
 .section1-1 {
-  background-color: var(--cloudygray);
+  background-color: var(--foggray);
   display: flex;
   justify-content: space-around;
+  margin: 27px;
   padding: 20px; /*반응형까지는 아니여도 화면 크기 줄이고 늘릴 때 그에 맞게 변하게 하고 싶으면 width, height 지정하지 말고 padding만 주기*/
   align-items: center;
 }
 
 .section1-2 {
-  background-color: var(--foggray);
+  background-color: var(--coconutwhite);
   margin: 0 50px;
   padding: 0 20px;
 }
@@ -34,22 +33,38 @@ th {
   justify-content: space-around;
   margin: 20px;
 }
-table {
-  background-color: rgb(122, 123, 117);
-}
+
 .section2-1 {
-  background-color: rgb(214, 203, 193);
+  background-color: var(--coconutwhite);
   padding: 20px;
+  width: 650px;
+}
+
+table {
+  background-color: var(--foggray);
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+
+td {
+  font-size: 12px;
+  border: 1px solid var(--grandmagray);
+}
+
+th {
+  height: 30px;
+  width: 20px;
 }
 
 .section2-2 {
   background-color: linen;
   padding: 20px;
+  margin: 0 20px;
 }
 
 .section2-3 {
   background-color: mistyrose;
-  padding: 10px;
+  padding: 20px 0 20px 20px;
 }
 
 #image {
