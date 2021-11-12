@@ -15,15 +15,35 @@ th {
   background-color: lightblue;
   display: flex;
   justify-content: space-around;
-  height: 160px;
+  padding: 20px; /*반응형까지는 아니여도 화면 크기 줄이고 늘릴 때 그에 맞게 변하게 하고 싶으면 width, height 지정하지 말고 padding만 주기*/
   align-items: center;
 }
 
 .section2 {
   background-color: lightcyan;
-  height: 140px;
   margin: 0 50px;
   padding: 0 20px;
+}
+
+.section3 {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.section3-1 {
+  background-color: linen;
+  padding: 20px;
+}
+
+.section3-2 {
+  background-color: linen;
+  padding: 20px;
+}
+
+.section3-3 {
+  background-color: mistyrose;
+  padding: 10px;
 }
 
 #image {
@@ -34,4 +54,14 @@ th {
 
 .highlight {
   background-color: lightyellow;
+}
+
+.youtube {
+  width: 560px;
+  height: 315px;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
 }
