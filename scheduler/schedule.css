@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .selected {
   background-color: brown;
 }
