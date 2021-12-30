@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+    var can = document.getElementById("canvas1"); 
+    var ctx = can.getContext("2d");
+
+   </script>
+   </head>
+
+<body>
+    <canvas id="canvas1" 
+    width="400" height="300"></canvas> 
+ 
+    
+   <div ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; width:200px; height:200px"></div>
+
+   <img id="image" src="https://picsum.photos/seed/picsum/200/300" draggable="true"
+   ondragstart="drag(event)" width="150" height="50" alt="" />
+   <svg width="1000" height="250">
+    <rect width="150" height="150" fill="orange">
+    <animate attributeName="x" from="0" to="300"
+    dur="3s" fill="freeze" repeatCount="2"/>
+    </rect>
+    </svg>
+</body>
+</html>

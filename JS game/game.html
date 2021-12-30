@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css" />
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(0,0);
+            context.lineTo(600,400);
+            context.stroke();
+
+            context.beginPath();
+            context.rect(50, 50, 200, 150); 
+            context.lineWidth=10;
+            context.strokeStyle="red";
+            context.fillStyle="green";
+            context.fill();
+            context.stroke();
+            
+            context.beginPath();
+            context.arc(150,150,100,0,1*Math.PI);
+            context.fillStyle="#5e9860";
+            context.fill();
+            context.stroke();
+        }; 
+    </script>
+</body>
+</html>
