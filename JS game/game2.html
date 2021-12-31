@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css" />
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            var size= 50;
+            var step = 10;
+
+            function draw() {
+                context.clearRect(0, 0, 600, 400);
+                
+                context.beginPath();
+                context.arc(300, 200, size, 0, 2*Math.PI);
+                context.fillStyle="gray";
+                context.fill();
+
+                size += step;
+                if (size >= 150 || size <= 50) {
+                    step *= -1;
+                }
+            }
+        setInterval(draw, 100);
+        }   
+</script>
+</body>
+</html>

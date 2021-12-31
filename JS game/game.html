@@ -43,8 +43,8 @@
             context.strokeText("Hello World",200,100);
 
             var img = new Image();
-            img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg'; 
-            img.onload =function(){
+                img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg'; 
+                img.onload =function(){
                 context.drawImage(img, 100, 300, 200, 200); 
             };
 
@@ -53,17 +53,18 @@
 
             function draw() {
                 context.clearRect(0,0,600,400);
-            context.beginPath();
-            context.rect(x, y, 100, 100);
-            context.fillStyle="red";
-            context.fill();
+                context.beginPath();
+                context.rect(x, y, 100, 100);
+                context.fillStyle="red";
+                context.fill();
 
-            x += 10;
-            if (x >= 600) {
-                x = -100
+                x += 10;
+                if (x >= 600) {
+                    x = -100
             }
             }
             setInterval(draw, 50);
+            
             
         }; 
     </script>
