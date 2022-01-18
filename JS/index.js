@@ -1,16 +1,19 @@
-const body = document.querySelector("body");
-body.style.backgroundColor = "purple";
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
+// const loginInput = document.querySelector("#login-form input");
+// const loginButton = document.querySelector("#login-form button");
 
-function handleWindowResize() {
-    let newColor;
-  if (window.innerWidth > 800) {
-    newColor = "#FFD700";
-  } else if (window.innerWidth>500 ) {
-    newColor = "purple";
-  } else {
-    newColor = "#4682B4";
+function onLoginBtnClick(){
+  console.dir(loginInput.value);
+  // console.log("click");
+  const username = loginInput.value;
+  if(username === ""){
+    // console.log("Please wirte your name");
+    alert("Please write your name");
+  }else if(username.length>15){
+    alert("Your name is too long.");
   }
-  body.style.backgroundColor = newColor;
 }
-window.addEventListener("resize", handleWindowResize);
+loginButton.addEventListener("click", onLoginBtnClick)
