@@ -1,12 +1,16 @@
-const h1 = document.querySelector("div.hello:first-child h1"); //1. find the element
+const body = document.querySelector("body");
+body.style.backgroundColor = "purple";
 
-function handleTitleClick() {//3. react to the event
-    const clickedClass="active";//use less raw values
-  if(h1.classList.contains(clickedClass)){
-      h1.classList.remove(clickedClass);
-  }else{
-    h1.classList.add(clickedClass);  
-}
-}
 
-h1.addEventListener("click", handleTitleClick);// 2. make the element listen to the event
+function handleWindowResize() {
+    let newColor;
+  if (window.innerWidth > 800) {
+    newColor = "#FFD700";
+  } else if (window.innerWidth>500 ) {
+    newColor = "purple";
+  } else {
+    newColor = "#4682B4";
+  }
+  body.style.backgroundColor = newColor;
+}
+window.addEventListener("resize", handleWindowResize);
