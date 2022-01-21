@@ -11,16 +11,22 @@ function saveToDos(){
 
 function deleteToDo(event){
     const li = event.target.parentElement;
+    toDos =toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     li.remove();
+    saveToDos();
 }
 
 function paintToDo(newTodo){
     const li = document.createElement("li");
+    li.id= newTodo.id;
+
     const span = document.createElement("span");
-    span.inneText=newTodo;
+    span.innerText=newTodo.text;
+
     const button = document.createElement("button");
     button.innerText="X";
     button.addEventListener("click",deleteToDo);
+
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
@@ -30,34 +36,24 @@ function handleToDoSubmit(event){
     event.preventDefault();
     const newTodo= toDoInput.value;
     toDoInput.value = "";
-    toDos.push(toDoInput);
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+    };
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 
 toDoForm.addEventListener("submit",handleToDoSubmit);
 
-// HOW TO WRITE A FUNCTION 1
-
-// function sayHello(item){
-//     console.log("this is the turn of ",item);
-// }
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-// if(saveToDos){
-//     const parsedToDos = JSON.parse(saveToDos);
-//     parsedToDos.forEach(sayHello);
-// }
-
-// HOW TO WRITE A FUNCTION 2
-
-// if(saveToDos){
-//     const parsedToDos = JSON.parse(saveToDos);
-//     parsedToDos.forEach((item)=> console.log("this is the turn of ",item));
-// }
-
-if(saveToDos){
-    const parsedToDos = JSON.parse(saveToDos);
+if(savedToDos){
+    const parsedToDos = JSON.parse(savedToDos);
     toDos= parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+
+//filter: doesn't modify the original array. it renders a new array.
