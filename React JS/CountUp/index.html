@@ -15,23 +15,18 @@
 <script type="text/babel">
     const root= document.querySelector("#root");
     const App =()=> {
-        // const data = React.useState(0);//[default value,function that modifies the value]
-        // const counter = data[0];
-        // const modifier = data[1];
-        const [counter, setCounter]=React.useState(0);
+        const [counter, setCounter]=React.useState(0);//when the modifier funtion is called the component is created again with the new value. However each time, react JS perceive the difference and change the specific part exclusivly.
         const onClick =()=>{
-            setCounter(counter+1);//update the value and rerender
-        }
+            // setCounter(counter+1);//update the value and rerender
+            setCounter((current)=>current + 1);
+        };
         return (
             <div>
             <h3>Total clicks: {counter}</h3>
             <button onClick={onClick}>Click me</button>
         </div>
         );
-        
     };
     ReactDOM.render(<App/>, root);
 </script>
 </html>
-
-<!--  -->
