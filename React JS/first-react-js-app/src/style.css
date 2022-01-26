@@ -1,0 +1,6 @@
+button {
+    color: white;
+    background-color: tomato;
+}
+/* we do not use style.css we make each css componeets as modules 
+Button.module.css, App.module.css*/
