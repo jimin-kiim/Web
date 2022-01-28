@@ -1,48 +1,44 @@
 import { useState, useEffect } from "react";
-
+import Movie from "./Movie";
 function App() {
     const [loading, setLoading] = useState(true);
-    const [coins, setCoins] = useState([]);
-    const [amount, setInput] = useState("");
-    const [select, setSelect] = useState(false);
+    const [movies, setMovies] = useState([]);
+    const getMovies = async () => {
+        const json = await (
+            await fetch(
+                `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year`
+            )
+        ).json();
+        setMovies(json.data.movies);
+        setLoading(false);
+        console.log(movies);
+    };
     useEffect(() => {
-        fetch("https://api.coinpaprika.com/v1/tickers")
-            .then((response) => response.json())
-            .then((json) => {
-                setCoins(json);
-                setLoading(false);
-            });
-    }, []);
-    const onChange = (event) => setInput(event.target.value);
-    const onSelect = (event) =>
-        setSelect(event.target.value.replace(/[^0-9.]/g, ""));
+        // fetch(
+        //     "https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year"
+        // )
+        //     .then((response) => response.json())
+        //     .then((json) => {
+        //         setMovies(json.data.movies);
+        //         setLoading(false);
+        //     });
+        getMovies();
+    });
     return (
         <div>
-            <h1>The Coins! {loading ? "" : `(${coins.length})`}</h1>
             {loading ? (
-                <strong>loading</strong>
+                <h1>Loading...</h1>
             ) : (
                 <div>
-                    <div>
-                        <span>"I have </span>
-                        <input value={amount} onChange={onChange}></input>
-                        <span> dollars."</span>
-                    </div>
-                    <span>"I want to buy </span>
-                    <select onChange={onSelect}>
-                        {coins.map((coin) => (
-                            <option key={coin.id}>
-                                {coin.name} ({coin.symbol}) : $
-                                {coin.quotes.USD.price.toFixed(2)}
-                                USD
-                            </option>
-                        ))}
-                        ;
-                    </select>
-                    <span>"</span>
-                    {select ? (
-                        <h3>You can buy {Math.floor(amount / select)} coin</h3>
-                    ) : null}
+                    {movies.map((movie) => (
+                        <Movie
+                            key={movie.id}
+                            coverImg={movie.medium_cover_image}
+                            title={movie.title}
+                            summary={movie.summary}
+                            genres={movie.genres}
+                        />
+                    ))}
                 </div>
             )}
         </div>
