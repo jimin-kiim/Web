@@ -1,9 +1,0 @@
-.title {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 18px;
-}
-
-/* 1. make a (name).module.css file
-   2. make a class and fill in
-     the class name can be already used in another .module.css it doesn't matter
-   3. import this file in the js file */
