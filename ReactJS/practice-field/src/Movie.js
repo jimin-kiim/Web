@@ -4,13 +4,10 @@ function Movie({ coverImg, title, summary, genres }) {
             <img src={coverImg} alt={title} />
             <h2>{title}</h2>
             <p>{summary}</p>
-            {hasOwnProperty("genres") ? (
-                <ul>
-                    {genres.map((genre) => (
-                        <li key={genre}>{genre}</li>
-                    ))}
-                </ul>
-            ) : null}
+
+            <ul>
+                {genres && genres.map((genre) => <li key={genre}>{genre}</li>)}
+            </ul>
         </div>
     );
 }

@@ -11,7 +11,6 @@ function App() {
         ).json();
         setMovies(json.data.movies);
         setLoading(false);
-        console.log(movies);
     };
     useEffect(() => {
         // fetch(
@@ -23,7 +22,7 @@ function App() {
         //         setLoading(false);
         //     });
         getMovies();
-    });
+    }, []);
     return (
         <div>
             {loading ? (
