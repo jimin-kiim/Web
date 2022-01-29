@@ -6,6 +6,7 @@ function App() {
         <Router>
             <Switch>
                 <Route path="/movie/:id">
+                    {/* I'm going to get a value to this variable, called " id" */}
                     <Detail />
                 </Route>
                 <Route path="/">
@@ -14,7 +15,5 @@ function App() {
             </Switch>
         </Router>
     );
-} //looking at the url
+}
 export default App;
-// Browser Router: /movie
-//HashRouter: /#/movie

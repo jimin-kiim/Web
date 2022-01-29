@@ -23,5 +23,3 @@ Movie.prototype = {
     genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default Movie;
-//a tag: the whole page is reloaded.
-//Link Component : moving to the other page without refreshing the browser
