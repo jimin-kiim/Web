@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "//jimin-kiim.github.io/Web/ReactJS/practice-field/static/js/main.f78cac58.js",
-    "index.html": "//jimin-kiim.github.io/Web/ReactJS/practice-field/index.html",
-    "main.f78cac58.js.map": "//jimin-kiim.github.io/Web/ReactJS/practice-field/static/js/main.f78cac58.js.map"
+    "main.js": "/Web/ReactJS/practice-field/static/js/main.f78cac58.js",
+    "index.html": "/Web/ReactJS/practice-field/index.html",
+    "main.f78cac58.js.map": "/Web/ReactJS/practice-field/static/js/main.f78cac58.js.map"
   },
   "entrypoints": [
     "static/js/main.f78cac58.js"
